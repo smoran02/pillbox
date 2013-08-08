@@ -1,6 +1,12 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* universal */
 
 html {
@@ -53,6 +59,20 @@ p {
   line-height: 1.7em;
 }
 
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
 /* header */
 
 #logo {
@@ -95,4 +115,14 @@ p {
 			color: $grayDarker;
 			text-decoration: none;
 		}
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
