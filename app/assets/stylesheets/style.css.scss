@@ -121,13 +121,13 @@ input {
 			margin-left: 8px;
 			}
 		}
-	}
 	a {
 		color: $gray;
 		&:hover {
 			color: $grayDarker;
 			text-decoration: none;
 		}
+	}
 }
 
 /* miscellaneous */
