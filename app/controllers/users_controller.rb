@@ -22,11 +22,15 @@ class UsersController < ApplicationController
   end
 
   def index
-    if current_user.admin
+    if signed_in? && current_user.admin
       @users = User.all
       render 'index'
     else
-      redirect_to root_url
+      if signed_in?
+        redirect_to user_path(current_user)
+      else
+        redirect_to root_url
+      end
     end
   end
 
