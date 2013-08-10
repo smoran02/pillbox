@@ -48,7 +48,6 @@ class UsersController < ApplicationController
 
   def weekly
     @user = current_user
-    render 'weekly'
   end
 
   private
