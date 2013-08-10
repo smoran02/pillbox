@@ -1,0 +1,10 @@
+<%= provide(:title, "PillBox | Users") %>
+<h1>All Users</h1>
+
+<div class="row">
+	<ul class="user-list">
+		<% @users.each do |user| %>
+			<li><%= user.name %></li>
+		<% end %>
+	</ul>
+</div>

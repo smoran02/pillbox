@@ -21,6 +21,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    if current_user.admin
+      @users = User.all
+      render 'index'
+    else
+      redirect_to root_url
+    end
+  end
+
   def edit
   end
 
@@ -32,6 +41,12 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User destroyed."
+    redirect_to users_url
   end
 
   private
