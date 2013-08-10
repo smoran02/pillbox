@@ -1,6 +1,12 @@
 <%= provide(:title, 'PillBox') %>
-<div class="center hero-unit">
-	<h1>PillBox</h1>
-	<h2>Helping you manage your daily medical rountines.</h2>
-	<%= link_to "Sign up now!", new_user_path, class: "btn btn-large btn-primary" %>
-</div>
+
+<% if signed_in? %>
+	<h1>Welcome Home, <%= "#{current_user.name.split(' ')[0]}" %>!</h1>
+
+<% else %>
+	<div class="center hero-unit">
+		<h1>PillBox</h1>
+		<h2>Helping you manage your daily medical rountines.</h2>
+		<%= link_to "Sign up now!", new_user_path, class: "btn btn-large btn-primary" %>
+	</div>
+<% end %>
