@@ -46,6 +46,11 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def weekly
+    @user = current_user
+    render 'weekly'
+  end
+
   private
 
   	def user_params
