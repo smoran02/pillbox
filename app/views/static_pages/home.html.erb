@@ -1,7 +1,14 @@
 <%= provide(:title, 'PillBox') %>
 
 <% if signed_in? %>
-	<h1>Welcome Home, <%= "#{current_user.name.split(' ')[0]}" %>!</h1>
+	<h1>
+		Welcome Home, <%= "#{current_user.name.split(' ')[0]}" %>!
+		<div>
+			<small>
+				Report for <%= Time.now.strftime("%A %B %d, %Y") %>
+			</small>
+		</div>
+	</h1>
 
 <% else %>
 	<div class="center hero-unit">
