@@ -1,4 +1,4 @@
 <%= provide(:title, "Weekly Report | #{@user.name}") %>
 <h1>Weekly Report for <%= @user.name %></h1>
-<h2>for the week starting <%= Time.now.beginning_of_week.strftime("%-m/%-d/%y") %>
-		and ending <%= Time.now.end_of_week.strftime("%-m/%-d/%y") %></h2>
+<h2>for the week starting <%= Time.now.beginning_of_week.strftime("%b %-d, %Y") %>
+		and ending <%= Time.now.end_of_week.strftime("%b %-d, %Y") %></h2>
