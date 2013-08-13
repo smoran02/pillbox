@@ -1,5 +1,6 @@
 <% provide(:title, "PillBox | #{@user.name}") %>
 <h1><%= @user.name %></h1>
+<h2>Report for <%= Time.now.strftime("%A %B %d, %Y") %></h2>
 <p>
 	<%= link_to "Weekly Report", weekly_path %>
 </p>
