@@ -12,14 +12,14 @@
 	<div class="span12">
 		<table class="table table-striped">
 			<tr>
-				<td>This week</td>
-				<td><%= (Time.now.beginning_of_week - 1.day).strftime("%-m/%e") %></td>
-				<td><%= (Time.now.beginning_of_week).strftime("%-m/%e") %></td>
-				<td><%= (Time.now.beginning_of_week + 1.day).strftime("%-m/%e") %></td>
-				<td><%= (Time.now.beginning_of_week + 2.days).strftime("%-m/%e") %></td>
-				<td><%= (Time.now.end_of_week - 3.days).strftime("%-m/%e") %></td>
-				<td><%= (Time.now.end_of_week - 2.days).strftime("%-m/%e") %></td>
-				<td><%= (Time.now.end_of_week - 1.day).strftime("%-m/%e") %></td>
+				<td>&nbsp;</td>
+				<td>Sun, <%= (Time.now.beginning_of_week - 1.day).strftime("%-m/%e") %></td>
+				<td>Mon, <%= (Time.now.beginning_of_week).strftime("%-m/%e") %></td>
+				<td>Tues, <%= (Time.now.beginning_of_week + 1.day).strftime("%-m/%e") %></td>
+				<td>Wed, <%= (Time.now.beginning_of_week + 2.days).strftime("%-m/%e") %></td>
+				<td>Thurs, <%= (Time.now.end_of_week - 3.days).strftime("%-m/%e") %></td>
+				<td>Fri, <%= (Time.now.end_of_week - 2.days).strftime("%-m/%e") %></td>
+				<td>Sat, <%= (Time.now.end_of_week - 1.day).strftime("%-m/%e") %></td>
 			</tr>
 			<tr>
 				<td>AM Weight:</td>
@@ -41,19 +41,114 @@
 				<td>113 / 78</td>
 				<td>113 / 78</td>
 			</tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
-			<tr></tr>
+			<tr>
+				<td>AM Pulse:</td>
+				<td>86</td>
+				<td>86</td>
+				<td>86</td>
+				<td>86</td>
+				<td>86</td>
+				<td>86</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td>AM Temperature:</td>
+				<td>97.1</td>
+				<td>97.1</td>
+				<td>97.1</td>
+				<td>97.1</td>
+				<td>97.1</td>
+				<td>97.1</td>
+				<td>97.1</td>
+			</tr>
+			<tr>
+				<td>AM Medication:</td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+			</tr>
+			<tr>
+				<td>Miralax:</td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+			</tr>
+			<tr>
+				<td>Lunch Medication:</td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+			</tr>
+			<tr>
+				<td>Nap:</td>
+				<td>Yes</td>
+				<td>Yes</td>
+				<td>Yes</td>
+				<td>Yes</td>
+				<td>Yes</td>
+				<td>Yes</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>PM Medication:</td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+			</tr>
+			<tr>
+				<td>PM Blood Pressure:</td>
+				<td>118 / 82</td>
+				<td>118 / 82</td>
+				<td>118 / 82</td>
+				<td>118 / 82</td>
+				<td>118 / 82</td>
+				<td>118 / 82</td>
+				<td>118 / 82</td>
+			</tr>
+			<tr>
+				<td>PM Pulse:</td>
+				<td>71</td>
+				<td>71</td>
+				<td>71</td>
+				<td>71</td>
+				<td>71</td>
+				<td>71</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td>Bedtime Medication:</td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+			</tr>
+			<tr>
+				<td>Bedtime:</td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= Time.now.strftime("%l:%M %p") %></td>
+			</tr>
 		</table>

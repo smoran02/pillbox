@@ -1,5 +1,5 @@
 <table class="table table-striped">
-	<% today = @user.dailies.last %>
+	<% today = current_user.dailies.last %>
 	<tr><td>Date:</td><td><%= today.report_for %></td></tr>
 	<tr><td>AM Weight:</td><td><%= today.am_weight %></td></tr>
 	<tr><td>AM Blood Pressure:</td>
@@ -14,7 +14,7 @@
 	<tr><td>PM Medication:</td><td><%= today.pm_meds.strftime("%l:%M %p") %></td></tr>
 	<tr><td>PM Blood Pressure:</td><td><%= today.pm_systolic %> / 
 		<%= today.pm_diastolic %></td></tr>
-	<tr><td>PM Pulse</td><td><%= today.pm_pulse %></td></tr>
+	<tr><td>PM Pulse:</td><td><%= today.pm_pulse %></td></tr>
 	<tr><td>Bedtime Medication:</td><td><%= today.bedtime_meds.strftime("%l:%M %p") %></td></tr>
 	<tr><td>Bedtime:</td><td><%= today.bedtime.strftime("%l:%M %p") %></td></tr>
 </table>
