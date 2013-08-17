@@ -2,10 +2,10 @@
 
 <% if signed_in? %>
 	<h1>
-		Welcome Home, <%= "#{current_user.name.split(' ')[0]}" %>!
+		Daily Report
 		<div>
 			<small>
-				Report for <%= Time.now.strftime("%A %B %d, %Y") %>
+				<%= Time.now.strftime("%A, %B %d, %Y") %>
 			</small>
 		</div>
 	</h1>
