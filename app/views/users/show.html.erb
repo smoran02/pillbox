@@ -1,13 +1,13 @@
 <% provide(:title, "PillBox | #{@user.name}") %>
 <h1><%= @user.name %></h1>
-<% if @user.dailies.any? %>
-	<ul>
-		<li><%= @user.dailies.last.report_for %></li>
-		<li><%= @user.dailies.last.am_weight %></li>
-		<li><%= @user.dailies.last.am_systolic %></li>
-	</ul>
-<% else %>
-	<p>
-		No reports found.
-	</p>
-<% end %>
+<div class="row">
+	<div class="span6 offset3">
+		<% if @user.dailies.any? %>
+			<%= render 'shared/daily_report' %>
+		<% else %>
+			<p>
+				No reports found.
+			</p>
+		<% end %>
+	</div>
+</div>

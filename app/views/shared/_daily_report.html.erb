@@ -1,0 +1,7 @@
+<table class="table table-striped">
+	<tr><td>Date:</td><td><%= @user.dailies.last.report_for %></td></tr>
+	<tr><td>AM Weight:</td><td><%= @user.dailies.last.am_weight %></td></tr>
+	<tr><td>AM Blood Pressure:</td>
+		<td><%= @user.dailies.last.am_systolic %> / 
+		<%= @user.dailies.last.am_diastolic %></td></tr>
+</table>
