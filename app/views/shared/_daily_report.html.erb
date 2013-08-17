@@ -7,14 +7,14 @@
 		<%= today.am_diastolic %></td></tr>
 	<tr><td>AM Pulse:</td><td><%= today.am_pulse %></td></tr>
 	<tr><td>AM Temperature:</td><td><%= today.am_temp %></td></tr>
-	<tr><td>AM Medication:</td><td><%= today.am_meds.strftime("%l:%M %p") %></td></tr>
-	<tr><td>Miralax</td><td><%= today.miralax.strftime("%l:%M %p") %></td></tr>
-	<tr><td>Lunch Medication:</td><td><%= today.lunch_meds.strftime("%l:%M %p") %></td></tr>
+	<tr><td>AM Medication:</td><td><%= report_time(today.am_meds) %></td></tr>
+	<tr><td>Miralax</td><td><%= report_time(today.miralax) %></td></tr>
+	<tr><td>Lunch Medication:</td><td><%= report_time(today.lunch_meds) %></td></tr>
 	<tr><td>Nap:</td><td><%= today.nap %></td></tr>
-	<tr><td>PM Medication:</td><td><%= today.pm_meds.strftime("%l:%M %p") %></td></tr>
+	<tr><td>PM Medication:</td><td><%= report_time(today.pm_meds) %></td></tr>
 	<tr><td>PM Blood Pressure:</td><td><%= today.pm_systolic %> / 
 		<%= today.pm_diastolic %></td></tr>
 	<tr><td>PM Pulse:</td><td><%= today.pm_pulse %></td></tr>
-	<tr><td>Bedtime Medication:</td><td><%= today.bedtime_meds.strftime("%l:%M %p") %></td></tr>
-	<tr><td>Bedtime:</td><td><%= today.bedtime.strftime("%l:%M %p") %></td></tr>
+	<tr><td>Bedtime Medication:</td><td><%= report_time(today.bedtime_meds) %></td></tr>
+	<tr><td>Bedtime:</td><td><%= report_time(today.bedtime) %></td></tr>
 </table>
