@@ -8,3 +8,52 @@
 		</small>
   </div>
 </h1>
+<div class="row">
+	<div class="span12">
+		<table class="table table-striped">
+			<tr>
+				<td>This week</td>
+				<td><%= (Time.now.beginning_of_week - 1.day).strftime("%-m/%e") %></td>
+				<td><%= (Time.now.beginning_of_week).strftime("%-m/%e") %></td>
+				<td><%= (Time.now.beginning_of_week + 1.day).strftime("%-m/%e") %></td>
+				<td><%= (Time.now.beginning_of_week + 2.days).strftime("%-m/%e") %></td>
+				<td><%= (Time.now.end_of_week - 3.days).strftime("%-m/%e") %></td>
+				<td><%= (Time.now.end_of_week - 2.days).strftime("%-m/%e") %></td>
+				<td><%= (Time.now.end_of_week - 1.day).strftime("%-m/%e") %></td>
+			</tr>
+			<tr>
+				<td>AM Weight:</td>
+				<td>150.1</td>
+				<td>150.1</td>
+				<td>150.1</td>
+				<td>150.1</td>
+				<td>150.1</td>
+				<td>150.1</td>
+				<td>150.1</td>
+			</tr>
+			<tr>
+				<td>AM Blood Pressure:</td>
+				<td>113 / 78</td>
+				<td>113 / 78</td>
+				<td>113 / 78</td>
+				<td>113 / 78</td>
+				<td>113 / 78</td>
+				<td>113 / 78</td>
+				<td>113 / 78</td>
+			</tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+		</table>
