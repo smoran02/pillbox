@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810053700) do
+ActiveRecord::Schema.define(version: 20130817034905) do
+
+  create_table "dailies", force: true do |t|
+    t.date     "report_for"
+    t.decimal  "am_weight"
+    t.integer  "am_systolic"
+    t.integer  "am_diastolic"
+    t.integer  "am_pulse"
+    t.decimal  "am_temp"
+    t.time     "am_meds"
+    t.time     "miralax"
+    t.time     "lunch_meds"
+    t.boolean  "nap"
+    t.time     "pm_meds"
+    t.integer  "pm_systolic"
+    t.integer  "pm_diastolic"
+    t.integer  "pm_pulse"
+    t.time     "bedtime_meds"
+    t.time     "bedtime"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "dailies", ["user_id", "report_for"], name: "index_dailies_on_user_id_and_report_for"
 
   create_table "users", force: true do |t|
     t.string   "name"
