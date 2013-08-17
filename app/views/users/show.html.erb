@@ -1,5 +1,13 @@
 <% provide(:title, "PillBox | #{@user.name}") %>
 <h1><%= @user.name %></h1>
-<p>
-	Some summation of medical history will appear here.
-</p>
+<% if @user.dailies.any? %>
+	<ul>
+		<li><%= @user.dailies.last.report_for %></li>
+		<li><%= @user.dailies.last.am_weight %></li>
+		<li><%= @user.dailies.last.am_systolic %></li>
+	</ul>
+<% else %>
+	<p>
+		No reports found.
+	</p>
+<% end %>
