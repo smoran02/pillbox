@@ -3,8 +3,8 @@
 	Weekly Report for <%= @user.name %>
 	<div>
 		<small>
-			for the week starting <%= Time.now.beginning_of_week.strftime("%b %-d, %Y") %>
-			and ending <%= Time.now.end_of_week.strftime("%b %-d, %Y") %>
+			for the week starting <%= (Time.now.beginning_of_week - 1.day).strftime("%b %-d, %Y") %>
+			and ending <%= (Time.now.end_of_week - 1.day).strftime("%b %-d, %Y") %>
 		</small>
   </div>
 </h1>
