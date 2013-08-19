@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	before_save { email.downcase! }
 	before_create :create_remember_token
+	after_create :create_first_daily
 
 	has_many :dailies, dependent: :destroy
 
@@ -24,6 +25,10 @@ class User < ActiveRecord::Base
 
   	def create_remember_token
   		self.remember_token = User.encrypt(User.new_remember_token)
+  	end
+
+  	def create_first_daily
+  		self.dailies.create(report_for: Date.today)
   	end
 
 end
