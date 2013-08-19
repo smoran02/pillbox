@@ -4,9 +4,9 @@
       <%= link_to "PillBox", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Today",    root_path %></li>
-          <li><%= link_to "This Week", weekly_path %></li>
           <% if signed_in? %>
+          	<li><%= link_to "Today",    root_path %></li>
+          	<li><%= link_to "This Week", weekly_path %></li>
             <li><%= link_to "Users", users_path if current_user.admin? %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
