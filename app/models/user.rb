@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   	end
 
   	def create_first_daily
-  		self.dailies.create(report_for: Date.today)
+  		self.dailies.create!(report_for: Date.today)
   	end
 
 end
