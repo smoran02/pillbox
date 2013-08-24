@@ -1,8 +1,7 @@
 MedsApp::Application.routes.draw do
   root 'static_pages#home'
-  resources :users do
-  	resources :dailies, only: [:edit, :update]
-  end
+  resources :users
+  resources :dailies, only: [:edit, :update]
   resources :sessions, only: [:create, :destroy, :new]
 
   match '/weekly', to: 'users#weekly', via: 'get'

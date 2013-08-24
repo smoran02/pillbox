@@ -1,3 +1,15 @@
 <%= provide(:title, "PillBox | Today") %>
 
 <h1>Report for <%= Date.today %></h1>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@daily) do |f| %>
+
+			<%= f.label :am_weight %>
+			<%= f.text_field :am_weight %>
+
+			<%= f.submit "Save", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>
