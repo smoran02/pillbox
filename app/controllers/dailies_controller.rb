@@ -16,7 +16,8 @@ class DailiesController < ApplicationController
 	private
 
 		def daily_params
-			params.require(:daily).permit(:am_weight)
+			params.require(:daily).permit(:am_weight, :am_systolic,
+				:am_diastolic, :am_pulse, :am_temp, :am_meds)
 		end
 
 		def get_daily

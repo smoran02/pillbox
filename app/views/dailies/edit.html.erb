@@ -6,8 +6,26 @@
 	<div class="span6 offset3">
 		<%= form_for(@daily) do |f| %>
 
-			<%= f.label :am_weight %>
+			<%= f.label :am_weight, "AM Weight" %>
 			<%= f.text_field :am_weight %>
+
+			<%= f.label :am_systolic, "AM Systolic" %>
+			<%= f.text_field :am_systolic %>
+
+			<%= f.label :am_diastolic, "AM Diastolic" %>
+			<%= f.text_field :am_diastolic %>
+
+			<%= f.label :am_pulse, "AM Pulse" %>
+			<%= f.text_field :am_pulse %>
+
+			<%= f.label :am_temp, "AM Temperature" %>
+			<%= f.text_field :am_temp %>
+
+			<%= f.label :am_meds, "AM Medication" %>
+			<%= f.time_field :am_meds %>
+
+			<%= f.label :miralax %>
+			<%= f.time_field :miralax %>
 
 			<%= f.submit "Save", class: "btn btn-large btn-primary" %>
 		<% end %>
