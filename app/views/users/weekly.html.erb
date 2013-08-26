@@ -43,73 +43,73 @@
 			</tr>
 			<tr>
 				<td>AM Pulse:</td>
-				<td>86</td>
-				<td>86</td>
-				<td>86</td>
-				<td>86</td>
-				<td>86</td>
-				<td>86</td>
-				<td>86</td>
+				<td><%= format_output(@sun_daily, :am_pulse) %></td>
+				<td><%= format_output(@mon_daily, :am_pulse) %></td>
+				<td><%= format_output(@tues_daily, :am_pulse) %></td>
+				<td><%= format_output(@wed_daily, :am_pulse) %></td>
+				<td><%= format_output(@thurs_daily, :am_pulse) %></td>
+				<td><%= format_output(@fri_daily, :am_pulse) %></td>
+				<td><%= format_output(@sat_daily, :am_pulse) %></td>
 			</tr>
 			<tr>
 				<td>AM Temperature:</td>
-				<td>97.1</td>
-				<td>97.1</td>
-				<td>97.1</td>
-				<td>97.1</td>
-				<td>97.1</td>
-				<td>97.1</td>
-				<td>97.1</td>
+				<td><%= format_output(@sun_daily, :am_temp) %></td>
+				<td><%= format_output(@mon_daily, :am_temp) %></td>
+				<td><%= format_output(@tues_daily, :am_temp) %></td>
+				<td><%= format_output(@wed_daily, :am_temp) %></td>
+				<td><%= format_output(@thurs_daily, :am_temp) %></td>
+				<td><%= format_output(@fri_daily, :am_temp) %></td>
+				<td><%= format_output(@sat_daily, :am_temp) %></td>
 			</tr>
 			<tr>
 				<td>AM Medication:</td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= time_output(@sun_daily, :am_meds) %></td>
+				<td><%= time_output(@mon_daily, :am_meds) %></td>
+				<td><%= time_output(@tues_daily, :am_meds) %></td>
+				<td><%= time_output(@wed_daily, :am_meds) %></td>
+				<td><%= time_output(@thurs_daily, :am_meds) %></td>
+				<td><%= time_output(@fri_daily, :am_meds) %></td>
+				<td><%= time_output(@sat_daily, :am_meds) %></td>
 			</tr>
 			<tr>
 				<td>Miralax:</td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= time_output(@sun_daily, :miralax) %></td>
+				<td><%= time_output(@mon_daily, :miralax) %></td>
+				<td><%= time_output(@tues_daily, :miralax) %></td>
+				<td><%= time_output(@wed_daily, :miralax) %></td>
+				<td><%= time_output(@thurs_daily, :miralax) %></td>
+				<td><%= time_output(@fri_daily, :miralax) %></td>
+				<td><%= time_output(@sat_daily, :miralax) %></td>
 			</tr>
 			<tr>
 				<td>Lunch Medication:</td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= time_output(@sun_daily, :lunch_meds) %></td>
+				<td><%= time_output(@mon_daily, :lunch_meds) %></td>
+				<td><%= time_output(@tues_daily, :lunch_meds) %></td>
+				<td><%= time_output(@wed_daily, :lunch_meds) %></td>
+				<td><%= time_output(@thurs_daily, :lunch_meds) %></td>
+				<td><%= time_output(@fri_daily, :lunch_meds) %></td>
+				<td><%= time_output(@sat_daily, :lunch_meds) %></td>
 			</tr>
 			<tr>
 				<td>Nap:</td>
-				<td>Yes</td>
-				<td>Yes</td>
-				<td>Yes</td>
-				<td>Yes</td>
-				<td>Yes</td>
-				<td>Yes</td>
-				<td>Yes</td>
+				<td><%= format_output(@sun_daily, :nap) %></td>
+				<td><%= format_output(@mon_daily, :nap) %></td>
+				<td><%= format_output(@tues_daily, :nap) %></td>
+				<td><%= format_output(@wed_daily, :nap) %></td>
+				<td><%= format_output(@thurs_daily, :nap) %></td>
+				<td><%= format_output(@fri_daily, :nap) %></td>
+				<td><%= format_output(@sat_daily, :nap) %></td>
 			</tr>
 			<tr>
 				<td>PM Medication:</td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= time_output(@sun_daily, :pm_meds) %></td>
+				<td><%= time_output(@mon_daily, :pm_meds) %></td>
+				<td><%= time_output(@tues_daily, :pm_meds) %></td>
+				<td><%= time_output(@wed_daily, :pm_meds) %></td>
+				<td><%= time_output(@thurs_daily, :pm_meds) %></td>
+				<td><%= time_output(@fri_daily, :pm_meds) %></td>
+				<td><%= time_output(@sat_daily, :pm_meds) %></td>
 			</tr>
 			<tr>
 				<td>PM Blood Pressure:</td>
@@ -123,33 +123,33 @@
 			</tr>
 			<tr>
 				<td>PM Pulse:</td>
-				<td>71</td>
-				<td>71</td>
-				<td>71</td>
-				<td>71</td>
-				<td>71</td>
-				<td>71</td>
-				<td>71</td>
+				<td><%= format_output(@sun_daily, :pm_pulse) %></td>
+				<td><%= format_output(@mon_daily, :pm_pulse) %></td>
+				<td><%= format_output(@tues_daily, :pm_pulse) %></td>
+				<td><%= format_output(@wed_daily, :pm_pulse) %></td>
+				<td><%= format_output(@thurs_daily, :pm_pulse) %></td>
+				<td><%= format_output(@fri_daily, :pm_pulse) %></td>
+				<td><%= format_output(@sat_daily, :pm_pulse) %></td>
 			</tr>
 			<tr>
 				<td>Bedtime Medication:</td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= time_output(@sun_daily, :bedtime_meds) %></td>
+				<td><%= time_output(@mon_daily, :bedtime_meds) %></td>
+				<td><%= time_output(@tues_daily, :bedtime_meds) %></td>
+				<td><%= time_output(@wed_daily, :bedtime_meds) %></td>
+				<td><%= time_output(@thurs_daily, :bedtime_meds) %></td>
+				<td><%= time_output(@fri_daily, :bedtime_meds) %></td>
+				<td><%= time_output(@sat_daily, :bedtime_meds) %></td>
 			</tr>
 			<tr>
 				<td>Bedtime:</td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
-				<td><%= Time.now.strftime("%l:%M %p") %></td>
+				<td><%= time_output(@sun_daily, :bedtime) %></td>
+				<td><%= time_output(@mon_daily, :bedtime) %></td>
+				<td><%= time_output(@tues_daily, :bedtime) %></td>
+				<td><%= time_output(@wed_daily, :bedtime) %></td>
+				<td><%= time_output(@thurs_daily, :bedtime) %></td>
+				<td><%= time_output(@fri_daily, :bedtime) %></td>
+				<td><%= time_output(@sat_daily, :bedtime) %></td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
