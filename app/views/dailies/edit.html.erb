@@ -27,6 +27,30 @@
 			<%= f.label :miralax %>
 			<%= f.time_field :miralax %>
 
+			<%= f.label :lunch_meds, "Lunch Medication" %>
+			<%= f.time_field :lunch_meds %>
+
+			<%= f.label :nap %>
+			<%= f.text_field :nap %>
+
+			<%= f.label :pm_meds, "PM Medication" %>
+			<%= f.time_field :pm_meds %>
+
+			<%= f.label :pm_systolic, "PM Systolic" %>
+			<%= f.text_field :pm_systolic %>
+
+			<%= f.label :pm_diastolic, "PM Diastolic" %>
+			<%= f.text_field :pm_diastolic %>
+
+			<%= f.label :pm_pulse, "PM Pulse" %>
+			<%= f.text_field :pm_pulse %>
+
+			<%= f.label :bedtime_meds, "Bedtime Medication" %>
+			<%= f.time_field :bedtime_meds %>
+
+			<%= f.label :bedtime %>
+			<%= f.time_field :bedtime %>
+
 			<%= f.submit "Save", class: "btn btn-large btn-primary" %>
 		<% end %>
 	</div>
