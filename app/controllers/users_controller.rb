@@ -48,6 +48,13 @@ class UsersController < ApplicationController
 
   def weekly
     @user = current_user
+    @sunday = Time.now.beginning_of_week - 1.day
+    @monday = Time.now.beginning_of_week
+    @tuesday = Time.now.beginning_of_week + 1.day
+    @wednesday = Time.now.beginning_of_week + 2.days
+    @thursday = Time.now.end_of_week - 3.days
+    @friday = Time.now.end_of_week - 2.days
+    @saturday = Time.now.end_of_week - 1.day
   end
 
   private
