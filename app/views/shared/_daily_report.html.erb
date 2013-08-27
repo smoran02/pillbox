@@ -17,4 +17,6 @@
 	<tr><td>PM Pulse:</td><td><%= today.pm_pulse %></td></tr>
 	<tr><td>Bedtime Medication:</td><td><%= report_time(today.bedtime_meds) %></td></tr>
 	<tr><td>Bedtime:</td><td><%= report_time(today.bedtime) %></td></tr>
+	<tr><td><%= link_to "Edit", edit_daily_path(Daily.find_by(report_for:
+					Date.today)), class: "btn btn-primary" %></td><td></td></tr>
 </table>
