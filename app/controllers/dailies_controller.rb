@@ -2,12 +2,13 @@ class DailiesController < ApplicationController
 	before_action :get_daily, only: [:update, :edit]
 
 	def edit
+		session[:return_to] ||= request.referer
 	end
 
 	def update
 		if @daily.update(daily_params)
 			flash[:success] = "Report updated"
-			redirect_to root_url
+			redirect_to session.delete(:return_to)
 		else
 			render 'edit'
 		end
