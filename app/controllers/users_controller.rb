@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+  	@daily = @user.dailies.find_by(report_for: Date.today)
   end
 
 	def create
