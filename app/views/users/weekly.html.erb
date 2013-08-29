@@ -33,13 +33,13 @@
 			</tr>
 			<tr>
 				<td>AM Blood Pressure:</td>
-				<td>113 / 78</td>
-				<td>113 / 78</td>
-				<td>113 / 78</td>
-				<td>113 / 78</td>
-				<td>113 / 78</td>
-				<td>113 / 78</td>
-				<td>113 / 78</td>
+				<td><%= bp_output(@sun_daily, :am_systolic, :am_diastolic) %></td>
+				<td><%= bp_output(@mon_daily, :am_systolic, :am_diastolic) %></td>
+				<td><%= bp_output(@tues_daily, :am_systolic, :am_diastolic) %></td>
+				<td><%= bp_output(@wed_daily, :am_systolic, :am_diastolic) %></td>
+				<td><%= bp_output(@thurs_daily, :am_systolic, :am_diastolic) %></td>
+				<td><%= bp_output(@fri_daily, :am_systolic, :am_diastolic) %></td>
+				<td><%= bp_output(@sat_daily, :am_systolic, :am_diastolic) %></td>
 			</tr>
 			<tr>
 				<td>AM Pulse:</td>
@@ -113,13 +113,13 @@
 			</tr>
 			<tr>
 				<td>PM Blood Pressure:</td>
-				<td>118 / 82</td>
-				<td>118 / 82</td>
-				<td>118 / 82</td>
-				<td>118 / 82</td>
-				<td>118 / 82</td>
-				<td>118 / 82</td>
-				<td>118 / 82</td>
+				<td><%= bp_output(@sun_daily, :pm_systolic, :pm_diastolic) %></td>
+				<td><%= bp_output(@mon_daily, :pm_systolic, :pm_diastolic) %></td>
+				<td><%= bp_output(@tues_daily, :pm_systolic, :pm_diastolic) %></td>
+				<td><%= bp_output(@wed_daily, :pm_systolic, :pm_diastolic) %></td>
+				<td><%= bp_output(@thurs_daily, :pm_systolic, :pm_diastolic) %></td>
+				<td><%= bp_output(@fri_daily, :pm_systolic, :pm_diastolic) %></td>
+				<td><%= bp_output(@sat_daily, :pm_systolic, :pm_diastolic) %></td>
 			</tr>
 			<tr>
 				<td>PM Pulse:</td>

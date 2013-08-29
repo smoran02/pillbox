@@ -25,4 +25,15 @@ module DailiesHelper
   	end
   end
 
+  def bp_output(daily, systolic, diastolic)
+  	if daily.nil?
+  		""
+  	elsif daily[systolic].nil? && !daily[diastolic].nil?
+  		" / #{daily[diastolic]}"
+  	elsif !daily[systolic].nil? && daily[diastolic].nil?
+  		"#{daily[systolic]} / "
+  	else
+  		"#{daily[systolic]} / #{daily[diastolic]}"
+  	end
+	end
 end
