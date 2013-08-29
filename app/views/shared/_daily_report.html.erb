@@ -10,7 +10,7 @@
 	<tr><td>AM Medication:</td><td><%= report_time(today.am_meds) %></td></tr>
 	<tr><td>Miralax</td><td><%= report_time(today.miralax) %></td></tr>
 	<tr><td>Lunch Medication:</td><td><%= report_time(today.lunch_meds) %></td></tr>
-	<tr><td>Nap:</td><td><%= today.nap %></td></tr>
+	<tr><td>Nap:</td><td><%= nap_output(today) %></td></tr>
 	<tr><td>PM Medication:</td><td><%= report_time(today.pm_meds) %></td></tr>
 	<tr><td>PM Blood Pressure:</td><td><%= today.pm_systolic %> / 
 		<%= today.pm_diastolic %></td></tr>

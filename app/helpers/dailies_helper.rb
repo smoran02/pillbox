@@ -36,4 +36,12 @@ module DailiesHelper
   		"#{daily[systolic]} / #{daily[diastolic]}"
   	end
 	end
+
+	def report_time(time)
+		if time.nil?
+			return ""
+		else
+			return time.strftime("%l:%M %p")
+		end
+	end
 end
