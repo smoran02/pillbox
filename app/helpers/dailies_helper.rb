@@ -44,4 +44,9 @@ module DailiesHelper
 			return time.strftime("%l:%M %p")
 		end
 	end
+
+	def add_edit_button(daily)
+		link_to "Edit", edit_daily_path(daily),
+								class: "btn btn-primary" unless daily.nil?
+	end
 end

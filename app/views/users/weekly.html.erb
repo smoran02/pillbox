@@ -153,19 +153,12 @@
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-				<td><%= link_to "Edit", edit_daily_path(@sun_daily),
-						class: "btn btn-primary" %></td>
-				<td><%= link_to "Edit", edit_daily_path(@mon_daily), 
-						class: "btn btn-primary" %></td>
-				<td><%= link_to "Edit", edit_daily_path(@tues_daily),
-						class: "btn btn-primary"  %></td>
-				<td><%= link_to "Edit", edit_daily_path(@wed_daily), 
-						class: "btn btn-primary"  %></td>
-				<td><%= link_to "Edit", edit_daily_path(@thurs_daily), 
-						class: "btn btn-primary"  %></td>
-				<td><%= link_to "Edit", edit_daily_path(@fri_daily), 
-						class: "btn btn-primary"  %></td>
-				<td><%= link_to "Edit", edit_daily_path(@sat_daily), 
-						class: "btn btn-primary"  %></td>
+				<td><%= add_edit_button(@sun_daily) %></td>
+				<td><%= add_edit_button(@mon_daily) %></td>
+				<td><%= add_edit_button(@tues_daily)  %></td>
+				<td><%= add_edit_button(@wed_daily)  %></td>
+				<td><%= add_edit_button(@thurs_daily)  %></td>
+				<td><%= add_edit_button(@fri_daily)  %></td>
+				<td><%= add_edit_button(@sat_daily)  %></td>
 			</tr>
 		</table>
