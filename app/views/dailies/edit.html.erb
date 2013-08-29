@@ -37,7 +37,10 @@
 			<%= f.time_field :lunch_meds %>
 
 			<%= f.label :nap %>
-			<%= f.text_field :nap %>
+			<%= f.radio_button :nap, true %>
+			<%= f.label :nap, 'Yes', value: true, class: 'radio inline' %>
+			<%= f.radio_button :nap, false %>
+			<%= f.label :nap, 'No', value: false, class: 'radio inline' %>
 
 			<%= f.label :pm_meds, "PM Medication" %>
 			<%= f.time_field :pm_meds %>

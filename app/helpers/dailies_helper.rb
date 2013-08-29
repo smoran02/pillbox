@@ -1,5 +1,5 @@
 module DailiesHelper
-	def format_output(daily, attribute)
+	def basic_output(daily, attribute)
 		if daily.nil? || daily[attribute].nil?
 			""
 		else
