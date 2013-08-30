@@ -3,8 +3,7 @@
 	<tr><td>Date:</td><td><%= today.report_for %></td></tr>
 	<tr><td>AM Weight:</td><td><%= today.am_weight %></td></tr>
 	<tr><td>AM Blood Pressure:</td>
-		<td><%= today.am_systolic %> / 
-		<%= today.am_diastolic %></td></tr>
+		<td><%= bp_output(today, :am_systolic, :am_diastolic) %></td></tr>
 	<tr><td>AM Pulse:</td><td><%= today.am_pulse %></td></tr>
 	<tr><td>AM Temperature:</td><td><%= today.am_temp %></td></tr>
 	<tr><td>AM Medication:</td><td><%= report_time(today.am_meds) %></td></tr>
@@ -12,8 +11,7 @@
 	<tr><td>Lunch Medication:</td><td><%= report_time(today.lunch_meds) %></td></tr>
 	<tr><td>Nap:</td><td><%= nap_output(today) %></td></tr>
 	<tr><td>PM Medication:</td><td><%= report_time(today.pm_meds) %></td></tr>
-	<tr><td>PM Blood Pressure:</td><td><%= today.pm_systolic %> / 
-		<%= today.pm_diastolic %></td></tr>
+	<tr><td>PM Blood Pressure:</td><td><%= bp_output(today, :pm_systolic, :pm_diastolic) %></td></tr>
 	<tr><td>PM Pulse:</td><td><%= today.pm_pulse %></td></tr>
 	<tr><td>Bedtime Medication:</td><td><%= report_time(today.bedtime_meds) %></td></tr>
 	<tr><td>Bedtime:</td><td><%= report_time(today.bedtime) %></td></tr>
