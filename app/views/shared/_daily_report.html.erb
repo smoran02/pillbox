@@ -1,6 +1,5 @@
 <table class="table table-striped">
 	<% today = current_user.dailies.last %>
-	<tr><td>Date:</td><td><%= today.report_for %></td></tr>
 	<tr><td>AM Weight:</td><td><%= today.am_weight %></td></tr>
 	<tr><td>AM Blood Pressure:</td>
 		<td><%= bp_output(today, :am_systolic, :am_diastolic) %></td></tr>
