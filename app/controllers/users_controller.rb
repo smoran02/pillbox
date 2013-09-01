@@ -48,19 +48,19 @@ class UsersController < ApplicationController
 
   def weekly
     @user = current_user
-    @sunday = Date.today.beginning_of_week - 1.day
+    @sunday = Date.today.beginning_of_week(:sunday)
     @sun_daily = current_user.dailies.find_by(report_for: @sunday)
-    @monday = Date.today.beginning_of_week
+    @monday = Date.today.beginning_of_week(:sunday) + 1.day
     @mon_daily = current_user.dailies.find_by(report_for: @monday)
-    @tuesday = Date.today.beginning_of_week + 1.day
+    @tuesday = Date.today.beginning_of_week(:sunday) + 2.days
     @tues_daily = current_user.dailies.find_by(report_for: @tuesday)
-    @wednesday = Date.today.beginning_of_week + 2.days
+    @wednesday = Date.today.beginning_of_week(:sunday) + 3.days
     @wed_daily = current_user.dailies.find_by(report_for: @wednesday)
-    @thursday = Date.today.end_of_week - 3.days
+    @thursday = Date.today.end_of_week(:sunday) - 2.days
     @thurs_daily = current_user.dailies.find_by(report_for: @thursday)
-    @friday = Date.today.end_of_week - 2.days
+    @friday = Date.today.end_of_week(:sunday) - 1.day
     @fri_daily = current_user.dailies.find_by(report_for: @friday)
-    @saturday = Date.today.end_of_week - 1.day
+    @saturday = Date.today.end_of_week(:sunday)
     @sat_daily = current_user.dailies.find_by(report_for: @saturday)
   end
 

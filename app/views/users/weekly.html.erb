@@ -3,8 +3,8 @@
 	Weekly Report
 	<div>
 		<small>
-			<%= (Time.now.beginning_of_week - 1.day).strftime("%b %-d, %Y") %> to
-			<%= (Time.now.end_of_week - 1.day).strftime("%b %-d, %Y") %>
+			<%= (Time.now.beginning_of_week(:sunday)).strftime("%b %-d, %Y") %> to
+			<%= (Time.now.end_of_week(:sunday)).strftime("%b %-d, %Y") %>
 		</small>
   </div>
 </h1>
@@ -13,13 +13,13 @@
 		<table class="table table-striped">
 			<tr>
 				<td>&nbsp;</td>
-				<td>Sun, <%= @sunday.strftime("%-m/%e") %></td>
-				<td>Mon, <%= @monday.strftime("%-m/%e") %></td>
-				<td>Tues, <%= @tuesday.strftime("%-m/%e") %></td>
-				<td>Wed, <%= @wednesday.strftime("%-m/%e") %></td>
-				<td>Thurs, <%= @thursday.strftime("%-m/%e") %></td>
-				<td>Fri, <%= @friday.strftime("%-m/%e") %></td>
-				<td>Sat, <%= @saturday.strftime("%-m/%e") %></td>
+				<td>Sun, <%= @sunday.strftime("%-m/%-e") %></td>
+				<td>Mon, <%= @monday.strftime("%-m/%-e") %></td>
+				<td>Tues, <%= @tuesday.strftime("%-m/%-e") %></td>
+				<td>Wed, <%= @wednesday.strftime("%-m/%-e") %></td>
+				<td>Thurs, <%= @thursday.strftime("%-m/%-e") %></td>
+				<td>Fri, <%= @friday.strftime("%-m/%-e") %></td>
+				<td>Sat, <%= @saturday.strftime("%-m/%-e") %></td>
 			</tr>
 			<tr>
 				<td>AM Weight:</td>
@@ -162,3 +162,5 @@
 				<td><%= add_edit_button(@sat_daily)  %></td>
 			</tr>
 		</table>
+	</div>
+</div>
